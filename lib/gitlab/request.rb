@@ -32,6 +32,7 @@ module Gitlab
 
     # Decodes a JSON response into Ruby object.
     def self.decode(response)
+      puts response
       JSON.load response
     rescue JSON::ParserError
       raise Error::Parsing.new "The response is not a valid JSON"
