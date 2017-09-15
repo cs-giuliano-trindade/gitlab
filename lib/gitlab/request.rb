@@ -32,6 +32,7 @@ module Gitlab
 
     # Decodes a JSON response into Ruby object.
     def self.decode(response)
+      puts options
       puts response
       JSON.load response
     rescue JSON::ParserError
